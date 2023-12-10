@@ -1,0 +1,92 @@
+.sparkboxes .box {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-shadow: 0 1px 1px 1px #666;
+  box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.08);
+  position: relative;
+  border-radius: 5px;
+}
+
+.sparkboxes .box .details {
+  position: absolute;
+  color: #fff;
+  transform: scale(0.7) translate(-22px, 20px);
+}
+.sparkboxes strong {
+  position: relative;
+  z-index: 3;
+  top: -8px;
+  color: #fff;
+}
+
+
+.sparkboxes .box1 {
+  background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+}
+
+.sparkboxes .box2 {
+  background-image: linear-gradient( 135deg, #2AFADF 10%, #4C83FF 100%);
+}
+
+.sparkboxes .box3 {
+  background-image: linear-gradient( 135deg, #FFD3A5 10%, #FD6585 100%);
+}
+
+.sparkboxes .box4 {
+  background-image: linear-gradient( 135deg, #EE9AE5 10%, #5961F9 100%);
+}
+
+body {
+  color: #777;
+  font-family: Montserrat, Arial, sans-serif;
+}
+
+.body-bg {
+  background: #F3F4FA !important;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 600;
+}
+
+.box .apexcharts-xaxistooltip {
+  background: #1B213B;
+  color: #fff;
+}
+
+.content-area {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.box {
+  background-color: #262D47;
+  padding: 25px 25px;
+  border-radius: 4px;
+}
+
+.columnbox {
+  padding-right: 15px;
+}
+.radialbox {
+  max-height: 306px;
+  margin-bottom: 60px;
+}
+
+.apexcharts-legend-series tspan:nth-child(3) {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.edit-on-codepen {
+  text-align: right;
+  width: 100%;
+  padding: 0 20px 40px;
+  position: relative;
+  top: -30px;
+  cursor: pointer;
+}
+
+.spinner-border {
+  display: none;
+}

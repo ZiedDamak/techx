@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protection Civile</title>
+
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script src="http://cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.7/all/gauge.min.js"></script>
+</head>
+
+<body>
+  <header class="header">
+
+    <a href="#" class="logo">
+      <img src="logo.png" alt="">
+    </a>
+
+    <nav class="navbar" style="text-align: center ;">
+      <a href="#Intro">Intro</a>
+      <a href="#wrapper">Dashboard</a>
+      <a href="#Home">Poubelle 1</a>
+      <a href="#About">About</a>
+    </nav>
+
+    <div class="icons">
+      <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+
+  </header>
+
+  <br><br>
+
+  <section class="Intro" id="Intro" style="margin-top: 70px;">
+
+    <h1 class="heading" style="padding:0 ;"> <span>Intro</span> </h1>
+
+    <div class="row">
+
+      <div class="image">
+        <img src="images/about-img.jpeg" alt="">
+      </div>
+
+      <div>
+        <h1 class="art-opacite" style="font-size: 240% ;text-align:center!important;">Notre Solution</h1>
+        <br>
+        <p style="text-align:center!important;">
+          Ce projet a le but de créer un evironnement favorable au habitants de sfax et les protéger contre les odeurs
+          et la qualité médiocre d'air
+          provenant des déchets méme si ils sont jettés dans les poubelles .
+          Cette solution des poubelles intelligntes à aussi pour object d'aider les minucipaltés pour avoir une gestion
+          optimale des zones ayant des quantités enormes de déchets.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <br><br>
+  <div id="wrapper">
+    <h1 class="heading"> <span>Dashboard</span> </h1>
+
+    <div class="content-area">
+      <div class="container-fluid">
+        <div class="main">
+
+          <div class="row sparkboxes mt-4">
+            <div class="col-md-3">
+              <div class="box box1">
+                <div class="details">
+                  <h3 style="font-size: 4rem;font-weight:700">1213</h3>
+                  <h4 style="font-size: 2rem;">Poubelles pleines</h4>
+                </div>
+                <div id="spark1"></div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box box2">
+                <div class="details">
+                  <h3 style="font-size: 4rem;font-weight:700">422</h3>
+                  <h4 style="font-size: 2rem;">Poubelles vides</h4>
+                </div>
+                <div id="spark2"></div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box box3">
+                <div class="details">
+                  <h3 style="font-size: 4rem;font-weight:700">311</h3>
+                  <h4 style="font-size: 2rem;">Poubelles non remplies</h4>
+                </div>
+                <div id="spark3"></div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box box4">
+                <div class="details">
+                  <h3 style="font-size: 4rem;font-weight:700">22</h3>
+                  <h4 style="font-size: 2rem;">incendis</h4>
+                </div>
+                <div id="spark4"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-md-5">
+              <div class="box columnbox mt-4">
+                <div id="columnchart"></div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="box  mt-4">
+                <div id="linechart"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-5">
+              <div class="box radialbox mt-4">
+                <div id="circlechart"></div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="box mt-4">
+                <div class="mt-4">
+                  <div id="progress1"></div>
+                </div>
+                <div class="mt-4">
+                  <div id="progress2"></div>
+                </div>
+                <div class="mt-4">
+                  <div id="progress3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="Home" id="Home">
+
+    <h1 class="heading"> <span>Poubelle 1</span> </h1>
+
+    <div class="content" style="padding-top:15px !important">
+      <div class="card-grid">
+        <div class="card">
+          <p class="card-title">Niveau de remplissage</p>
+          <canvas id="gauge-temperature"></canvas>
+        </div>
+
+        <div class="card">
+          <p class="card-title">Qualité de l'air</p>
+          <canvas id="gauge-humidity" class="marg"></canvas>
+        </div>
+
+        <div class="card">
+          <p class="card-title">Incendie</p>
+          <canvas id="gauge-fire" class="marg"></canvas>
+        </div>
+
+        <div class="card">
+          <p class="card-title">Extincteur</p>
+          <canvas id="gauge-sol-humidity" class="marg"></canvas>
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="About" id="About">
+
+    <h1 class="heading"> <span>About</span> </h1>
+
+    <div class="row">
+      <div class="column" style="width:16.66%"></div>
+      <div class="column">
+        <div class="card">
+          <img src="zied.png" alt="Jane" style="width:100%">
+          <div class="container">
+            <br>
+            <h2>Zied DAMMAK</h2>
+            <p>Zied.dammak@enis.tn</p>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="ayoub.jpg" alt="John" style="width:100%">
+          <div class="container">
+            <br>
+            <h2>Ayoub DAMMAK</h2>
+            <p>ayoub.dammak@iit.ens.tn</p>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column" style="width:16.66%"></div>
+
+
+  </section>
+
+  <script src="script.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
